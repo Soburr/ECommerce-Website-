@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+.header-container {
+    /* position: relative;
+    height: 90vh;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url('draw.png');
+    background-size: cover; */
+    text-align: center;
+
+}
+
+.header-text { 
+    color: red;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text-main {
+    animation: move-in-left 1.6s ease-in;
+    font-size: 5rem;
+    letter-spacing: 1.6rem;
+
+}
+
+.header-text-sub {
+    animation: move-in-right 1.2s ease-in;
+    font-size: 2.4rem;
+    letter-spacing: 1.2rem; 
+}
+
+@keyframes  move-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes  move-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: rotateX(200deg);
+    }
+}
+
+.header-login {
+  animation: move-in-left 1.6s ease-in;
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor:  pointer;
+  border-radius: 50px;
+}
+
+.header-register {
+    animation: move-in-right 1.6s ease-in;
+    font-weight: bold;
+    color: black;
+    padding: 7px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor:  pointer;
+  }
+
+  .bg-img {
+    background: url('iphone.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-img:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    text-align: center;
+    padding: 60px 32px;
+    width: 370px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.content h2 {
+    letter-spacing: 10px;
+    color: #fff;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 35px 0;
+    font-family: cursive;
+}
+
+.field {
+    position: relative;
+    height: 45px;
+    border-radius: 300px;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.field span {
+    color: #222;
+    width: 40px;
+    line-height: 45px;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.space {
+    margin-top: 16px;
+}
+
+.show {
+    position: absolute;
+    right: 13px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    display: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+.pass-key:valid ~ .show {
+    display: block;
+}
+
+.pass {
+    text-align: left;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.pass a {
+    color: #3498db;
+}
+.pass:hover a{
+    text-decoration: underline;
+    color: red;
+}
+
+.field input[type="submit"] {
+    background: #3498db;
+    border: 1px solid #2691d9;
+    border-radius: 300px;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;   
+}
+
+.field input[type="submit"] :hover {
+    background: #2691d9;
+}
+
+.login {
+    color: #fff;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.links {
+    display: flex;
+    cursor: pointer;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+
+.face, .insta {
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 10px;
+}
+
+.face {
+    margin-left: 0;
+    background: #4267B2;
+    border: 1px solid #3e61a8;
+}
+
+.insta {
+    background: #E1306c;
+    border: 1px solid #df2060;
+}
+
+.face:hover {
+    background: #3e61a8;
+}
+
+.insta:hover {
+    background: #df2060;
+}
+
+.links i {
+    font-size: 17px;
+}
+
+i span {
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.signup {
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.signup a{
+    color: #3498db;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
