@@ -13,143 +13,42 @@
     </div>
   </div>
 
-  
-  <div class="products">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="filters">
-            <ul>
-                <li class="active" data-filter="*">All Products</li>
-                <li data-filter=".des">Featured</li>
-                <li data-filter=".dev">Flash Deals</li>
-                <li data-filter=".gra">Last Minute</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="filters-content">
-              <div class="row grid">
-                  <div class="col-lg-4 col-md-4 all des">
-                    <div class="product-item">
-                      <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
-                      <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$18.25</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (12)</span>
-                      </div>
+
+  <div class="container-fluid">
+    <div class="row">
+    @foreach ($products as $product)
+
+                <div class="col-md-4 pt-4">
+                    <div class="product-card">
+                    <span class="card-tag">{{ $product->category }}</span>
+                    <div class="card-header">
+                        <img src="{{ asset("storage/" .$product->image_path ) }}">
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 all dev">
-                    <div class="product-item">
-                      <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
-                      <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$16.75</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (24)</span>
-                      </div>
+
+                    <div class="card-body">
+                        <h4 class="product-title">{{ $product->title }}</h4>
+                        <p class="product-status">Shipped in 3-4 days</p>
+                        <h3 class="product-prices">${{ $product->fee }}</h3>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 all gra">
-                    <div class="product-item">
-                      <a href="#"><img src="assets/images/product_03.jpg" alt=""></a>
-                      <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$32.50</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (36)</span>
-                      </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-secondary">
+                            <i class="bi bi-cart3"></i>
+                            Description
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-bag"></i>
+                            Add to cart
+                        </button>
                     </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 all gra">
-                    <div class="product-item">
-                      <a href="#"><img src="assets/images/product_04.jpg" alt=""></a>
-                      <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$24.60</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (48)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 all dev">
-                    <div class="product-item">
-                      <a href="#"><img src="assets/images/product_05.jpg" alt=""></a>
-                      <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$18.75</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (60)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 all des">
-                    <div class="product-item">
-                      <a href="#"><img src="assets/images/product_06.jpg" alt=""></a>
-                      <div class="down-content">
-                        <a href="#"><h4>Tittle goes here</h4></a>
-                        <h6>$12.50</h6>
-                        <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                        <ul class="stars">
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                        <span>Reviews (72)</span>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <ul class="pages">
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-          </ul>
-        </div>
+                </div>
+            </div>
+    @endforeach
+    </div>
+</div>
+
+
+
       </div>
     </div>
   </div>

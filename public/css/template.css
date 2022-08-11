@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.product-card{
+	background-color: #fff;
+	padding: 18px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.card-tag{
+	background-color: rgba(179 , 75 , 248 , 0.3);
+	padding: 5px 10px;
+	border-radius: 2px;
+}
+.card-header{
+    margin-left: 90px;
+	padding: 30px 50px;
+	text-align: center;
+
+}
+.card-header img{
+	max-height: 200px;
+}
+.product-title{
+	font-size: 24px;
+	color: #353535;
+	margin: 20px 0;
+}
+
+.product-status{
+	color: #808080;
+}
+.product-price{
+	font-size: 30px;
+	color: #353535;
+	margin: 20px 0;
+}
+.card-footer{
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn{
+	padding: 10px 40px;
+	border: none;
+	font-family: inherit;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 100%;
+}
+
+.btn-primary{
+	background-color: #b34bf8;
+	color: #fff;
+}
+.btn-primary:hover{
+	background-color: #943EF0;
+}
+
+.btn-secondary{
+	color: #808080;
+}
+.btn-secondary:hover{
+	background-color: #9B9090;
+	color: white;
+}
+
+
+.card-footer .btn:first-child{
+	margin-right: 15px;
+}
+
+/* .next {
+
+} */
+
+.next a {
+    background-color: #fff;
+    color: blue;
+    padding: 14px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 100px;
+    border: 2px solid red;
+}

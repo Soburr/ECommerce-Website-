@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function product () {
-        $product = Product::all();
-        return view('dashboard.product', compact('product'));
+        $products = Product::all();
+        return view('dashboard.product')->with('products', $products);
     }
+
 }
