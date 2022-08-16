@@ -1,59 +1,56 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/login.css')}}">
+    <title>Newton</title>
+</head>
+<body>
+    <div class="bg-img">
+        <div class="content">
+            <h2>NEWTONs</h2>
+            <form action="{{ route('register') }}" method="POST">
+                @csrf
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                {{-- Name Field --}}
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="text" name="name" placeholder="Name" required autofocus>
+                </div><br>
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+                {{-- Email Field --}}
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="text" name="email" placeholder="Email" required autofocus>
+                </div>
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+                {{-- Password Field --}}
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" name="password" placeholder="Password" required autofocus>
+                    <span class="show">SHOW</span>
+                </div>
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-            </div>
+                {{-- Confirm Password --}}
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" name="password_confirmation" placeholder="Confirm Password" id="password_confirmation" required autofocus>
+                    <span class="show">SHOW</span>
+                </div><br>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+                {{-- Login Field --}}
+                <div class="field">
+                    <input type="submit" value="LOG IN">
+                </div>
+            </form><br>
+            <div class="signup">
+              <span>Already Registered ?</span>
+                <a href="login">Log In</a><br><br>
+        </div>
+    </div>
+</body>
+</html>

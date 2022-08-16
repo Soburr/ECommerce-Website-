@@ -14,8 +14,8 @@
           </div>
         </div>
       </div>
-  
-  
+
+
       <div class="best-features about-features">
         <div class="container">
           <div class="row">
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-6">
               <div class="right-image">
-                <img src="assets/images/feature-image.jpg" alt="">
+                <img src="images/feature-image.jpg" alt="">
               </div>
             </div>
             <div class="col-md-6">
@@ -34,18 +34,18 @@
                 <h4>Who we are &amp; What we do?</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
                 <ul class="social-icons">
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                  <li><a href="{{ url('hhtp://facebook.com') }}"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="{{ url('hhtp://twitter.com') }}"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="{{ url('hhtp://linkedin.com') }}"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="{{ url('hhtp://whatsapp.com') }}"><i class="fa fa-whatsapp"></i></a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-  
-      
+
+
       <div class="team-members">
         <div class="container">
           <div class="row">
@@ -57,7 +57,7 @@
             <div class="col-md-4">
               <div class="team-member">
                 <div class="thumb-container">
-                  <img src="assets/images/team_01.jpg" alt="">
+                  <img src="images/team_01.jpg" alt="">
                   <div class="hover-effect">
                     <div class="hover-content">
                       <ul class="social-icons">
@@ -79,7 +79,7 @@
             <div class="col-md-4">
               <div class="team-member">
                 <div class="thumb-container">
-                  <img src="assets/images/team_02.jpg" alt="">
+                  <img src="images/team_02.jpg" alt="">
                   <div class="hover-effect">
                     <div class="hover-content">
                       <ul class="social-icons">
@@ -101,7 +101,7 @@
             <div class="col-md-4">
               <div class="team-member">
                 <div class="thumb-container">
-                  <img src="assets/images/team_03.jpg" alt="">
+                  <img src="images/team_03.jpg" alt="">
                   <div class="hover-effect">
                     <div class="hover-content">
                       <ul class="social-icons">
@@ -123,7 +123,7 @@
             <div class="col-md-4">
               <div class="team-member">
                 <div class="thumb-container">
-                  <img src="assets/images/team_04.jpg" alt="">
+                  <img src="images/team_04.jpg" alt="">
                   <div class="hover-effect">
                     <div class="hover-content">
                       <ul class="social-icons">
@@ -145,7 +145,7 @@
             <div class="col-md-4">
               <div class="team-member">
                 <div class="thumb-container">
-                  <img src="assets/images/team_05.jpg" alt="">
+                  <img src="images/team_05.jpg" alt="">
                   <div class="hover-effect">
                     <div class="hover-content">
                       <ul class="social-icons">
@@ -167,7 +167,7 @@
             <div class="col-md-4">
               <div class="team-member">
                 <div class="thumb-container">
-                  <img src="assets/images/team_06.jpg" alt="">
+                  <img src="images/team_06.jpg" alt="">
                   <div class="hover-effect">
                     <div class="hover-content">
                       <ul class="social-icons">
@@ -189,8 +189,8 @@
           </div>
         </div>
       </div>
-  
-  
+
+
       <div class="services">
         <div class="container">
           <div class="row">
@@ -233,9 +233,9 @@
           </div>
         </div>
       </div>
-  
-  
-      <div class="happy-clients">
+
+
+      {{-- <div class="happy-clients">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -246,31 +246,31 @@
             <div class="col-md-12">
               <div class="owl-clients owl-carousel">
                 <div class="client-item">
-                  <img src="assets/images/client-01.png" alt="1">
+                  <img src="images/client-01.png" alt="1">
                 </div>
-                
+
                 <div class="client-item">
-                  <img src="assets/images/client-01.png" alt="2">
+                  <img src="images/client-01.png" alt="2">
                 </div>
-                
+
                 <div class="client-item">
-                  <img src="assets/images/client-01.png" alt="3">
+                  <img src="images/client-01.png" alt="3">
                 </div>
-                
+
                 <div class="client-item">
-                  <img src="assets/images/client-01.png" alt="4">
+                  <img src="images/client-01.png" alt="4">
                 </div>
-                
+
                 <div class="client-item">
-                  <img src="assets/images/client-01.png" alt="5">
+                  <img src="images/client-01.png" alt="5">
                 </div>
-                
+
                 <div class="client-item">
-                  <img src="assets/images/client-01.png" alt="6">
+                  <img src="images/client-01.png" alt="6">
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
 @endsection

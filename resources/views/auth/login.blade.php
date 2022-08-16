@@ -1,56 +1,64 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <title>Newton</title>
+</head>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<body>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+    <div class="bg-img">
+        <div class="content">
+            <h2>NEWTONs</h2>
+            <form action="{{ asset('login') }}" method="POST">
+                @csrf
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+                {{-- Email Field --}}
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="text" name="email" placeholder="Email" required autofocus>
+                </div>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
+                {{-- Password Field --}}
+                <div class="field space">
+                    <span class="fa fa-lock"></span>
+                    <input type="password" name="password" placeholder="Password" required autofocus>
+                    <span class="show">SHOW</span>
+                </div><br>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                {{-- Login Field --}}
+                <div class="field">
+                    <input type="submit" value="LOG IN">
+                </div>
+            </form><br>
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
+            {{-- Signup --}}
+            <div class="signup">
+                <input type="checkbox" name="remember" id="remember_me"
+                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+            {{-- Remember Me --}}
+                <span>{{ __('Remember me') }}</span><br><br>
+                Don't have an account ?
+                <a href="register">Sign Up</a><br><br>
 
-            <div class="flex items-center justify-end mt-4">
+            {{-- Reset Password --}}
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                        href="{{ route('password.request') }}"> Forgot Your password? </a>
                 @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
             </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

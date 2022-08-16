@@ -14,7 +14,7 @@
             <div class="banner-item-02">
                 <div class="text-content">
                     <h4>Flash Deals</h4>
-                    <h2>Get your favourite products</h2>
+                    <h2>Get your favourite Gadgets</h2>
                 </div>
             </div>
             <div class="banner-item-03">
@@ -24,8 +24,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br><br>
     <!-- Banner Ends Here -->
+
+    <div class="flagged-card">
+        <span class="flagged-tag">
+            <strong> WEEKLY FEATURED </strong>
+        </span>
+    </div>
+
 
     <div class="container-fluid">
         <div class="row">
@@ -46,7 +53,7 @@
                         <div class="card-footer">
                             <button class="btn btn-secondary">
                                 <i class="bi bi-cart3"></i>
-                                Description
+                                <a href="{{ $product->description }}">Description</a>
                             </button>
                             <button class="btn btn-primary">
                                 <i class="bi bi-bag"></i>
@@ -63,10 +70,20 @@
     <div class="row">
         <div class="col-md-12">
             <div class="next">
-                <a href="{{ asset('product') }}">VIEW ALL PRODUCTS</a>
+                <a href="{{ asset('product') }}">VIEW MORE PRODUCTS</a>
             </div>
         </div>
-    </div>
+    </div><br><br>
+
+
+
+    <form action="{{ route('search') }}">
+        <div class="last">
+            <input type="text" name="search" placeholder="Search" required>
+            <button type="submit">Search</button>
+        </div>
+    </form><br><br>
+
 
 
 
