@@ -19,11 +19,17 @@ Route::get('/', function () {
 
 Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->middleware(['auth'])->name('dashboard');
 
-Route::get('/product', 'App\Http\Controllers\ProductController@product');
+Route::get('/product', 'App\Http\Controllers\ProductController@product')->middleware(['auth'])->name('product');
 
-Route::get('/about', 'App\Http\Controllers\DashboardController@about');
+Route::get('/about', 'App\Http\Controllers\DashboardController@about')->middleware(['auth'])->name('about');
 
-Route::get('/contact', 'App\Http\Controllers\DashboardController@contact');
+Route::get('/contact', 'App\Http\Controllers\DashboardController@contact')->middleware(['auth'])->name('contact');
+
+Route::get('/search', 'App\Http\Controllers\SearchController@search')->middleware(['auth'])->name('search');
+
+Route::get('/cart', 'App\Http\Controllers\CartController@cart')->middleware(['auth'])->name('cart');
+
+Route::get('/addToCart', 'App\Http\Controllers\CartController@addToCart');
 
 Route::get('/logout', 'App\Http\Controllers\DashboardController@logout');
 

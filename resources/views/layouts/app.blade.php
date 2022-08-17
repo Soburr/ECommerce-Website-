@@ -25,7 +25,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Newton') }}</title>
 
 
     </head>
@@ -52,7 +52,7 @@
                 <header class="">
                   <nav class="navbar navbar-expand-lg">
                     <div class="container">
-                      <a class="navbar-brand" href="index.html"><h2>Newton <em>Clothing</em></h2></a>
+                      <a class="navbar-brand" href="index.html"><h2>Newton<em>'s</em></h2></a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -71,6 +71,9 @@
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="contact">CONTACT US</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="cart">CART</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="{{url('/logout')}}">LOG OUT</a>
@@ -92,7 +95,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="inner-content">
-                          <p>Copyright &copy; 2022</p> {{-- Newton Clothing Co., Ltd. --}}
+                          <p>Copyright &copy; 2022</p> Newton Co., Ltd.
                         </div>
                       </div>
                     </div>

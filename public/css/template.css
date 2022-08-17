@@ -80,11 +80,44 @@
 } */
 
 .next a {
-    background-color: #fff;
-    color: blue;
+    background-color: blue;
+    color: #fff;
     padding: 14px 20px;
     text-align: center;
     display: inline-block;
     border-radius: 100px;
-    border: 2px solid red;
+    box-shadow: 0 10px 15px rgba(29, 71, 211, 0.774);
+    /* border: 2px solid blue; */
+}
+
+div .next {
+    text-align: center;
+    width: 100%;
+}
+
+.last {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+
+.last input {
+    border-radius: 300px;
+    display: inline-block;
+}
+
+
+.flagged-tag {
+    background-color: rgb(123, 255, 0);
+	padding: 5px 10px;
+	border-radius: 2px;
+}
+
+.flagged-card{
+	background-color: #eee;
+	padding: 18px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
