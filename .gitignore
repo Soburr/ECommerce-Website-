@@ -14,4 +14,8 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+<<<<<<< HEAD
 /nova
+=======
+/nova/nova
+>>>>>>> ea15d20c3dd13589e34dde0bed716db5798d133c
