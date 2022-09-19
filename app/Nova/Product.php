@@ -15,6 +15,7 @@ use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Symfony\Component\HttpFoundation\Session\Session;
 
@@ -58,7 +59,13 @@ class product extends Resource
 
             Image::make('image_path')->disk('public')->rules('required'),
 
-            Text::make('description')->rules('required'),
+            Textarea::make('description')->rules('required'),
+
+            Text::make('ram_size')->rules('required'),
+
+            Text::make('condition')->rules('required'),
+
+            Text::make('type')->rules('required'),
 
             Number::make('fee')->min(100)->max(1000000)->step(0.01)->rules('required'),
 
@@ -76,7 +83,7 @@ class product extends Resource
 
             BelongsTo::make('User')
 
-            
+
         ];
     }
 

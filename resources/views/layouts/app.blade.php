@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
                        <!-- Fonts -->
         {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
 
@@ -52,7 +53,7 @@
                 <header class="">
                   <nav class="navbar navbar-expand-lg">
                     <div class="container">
-                      <a class="navbar-brand" href="index.html"><h2>Newton<em>'s</em></h2></a>
+                      <a class="navbar-brand" href="index.html"><h2>Newton<em>S</em></h2></a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -74,7 +75,20 @@
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="cart">CART</a>
-                          </li>
+                          </li><br>
+
+                        <li class="nav-item">
+                            <form action="{{ route('search') }}" class="search_form">
+                                <div class="last">
+                                    <input type="text" class="form-control" name="search" placeholder="Search here..." required>
+                                    <button class="" type="submit">
+                                      <i class="fa fa-search" aria-hidden="false"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </li>
+
+
                           <li class="nav-item">
                             <a class="nav-link" href="{{url('/logout')}}">LOG OUT</a>
                           </li>
@@ -95,7 +109,20 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="inner-content">
-                          <p>Copyright &copy; 2022</p> Newton Co., Ltd.
+                            <p style="color: #fff;">Stay Connected</p>
+                            <div class="awesome">
+                            <a href="//facebook.com/profile.php?id=100066858159194/"><i class="fa fa-facebook-f"></i></a>
+                            <a href="//github.com/Soburr"><i class="fa fa-github"></i></a>
+                            <a href="//linkedin.com/in/adebesin-adewunmi-334897220/"><i class="fa fa-linkedin"></i></a>
+                            <a href="//wa.me/2348140902526"><i class="fa fa-whatsapp"></i></a>
+                            <a href="//twitter.com/LilLucie4?t=pDIYS_BC8I7Mahub0xTkBQ&s=09/"> <i class="fa fa-twitter"></i></a>
+                            <a href="//instagram.com/newton0999/"><i class="fa fa-instagram"></i></a>
+                        </div><br>
+                            <p style="color: #fff;">Contact us via mail</p>
+                            <p style="color: #fff; text-transform: lowercase;">adebesinnewton99@gmail.com</p><br>
+                            <p style="color: #fff;">Dev Number</p>
+                            <p style="color: #fff;">+234 814 0902 526</p><br><br>
+                              &copy; 2022 | Newton Co., Ltd.
                         </div>
                       </div>
                     </div>

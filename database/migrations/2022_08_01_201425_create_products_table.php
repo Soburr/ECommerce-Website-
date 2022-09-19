@@ -6,20 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('user_id');
             $table->string('title');
             $table->string('image_path');
-            $table->string('description');
+            $table->longText('description');
             $table->float('fee');
+            $table->integer('ram_size');
+            $table->string('condition');
+            $table->string('type');
             $table->timestamps();
             $table->datetime('publish_at')->nullable();
             $table->datetime('publish_until')->nullable();
@@ -28,11 +27,6 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('products');

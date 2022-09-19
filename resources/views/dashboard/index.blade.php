@@ -53,11 +53,11 @@
                         <div class="card-footer">
                             <button class="btn btn-secondary">
                                 <i class="bi bi-cart3"></i>
-                                <a href="{{ $product->description }}">Description</a>
+                                <a href="{{ url('product/' .$product->id) }}">Description</a>
                             </button>
                             <button class="btn btn-primary">
                                 <i class="bi bi-bag"></i>
-                                Add to cart
+                              <a href="{{ url('add-to-cart/' .$product->id) }}">Add to cart</a>
                             </button>
                         </div>
                     </div>

@@ -121,3 +121,50 @@ div .next {
 	border-radius: 10px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
+
+footer {
+    background-color: #222;
+    color: #fff;
+}
+
+.awesome {
+    letter-spacing: 5px;
+   font-size: 24px;
+   color: greenyellow;
+}
+
+.type {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.second-type p {
+    font-size: 16px;
+    margin-right: 235px;
+    font-weight: 400;
+}
+
+.third-type button {
+    border: 1px solid blue;
+    padding: 8px;
+    background-color: red;
+    color: #fff;
+    font-size: 16px;
+    font-family: cursive;
+    margin-right: 328px;
+    font-weight: 400;
+}
+
+.fourth-type button {
+    border: 1px solid blue;
+    padding: 8px;
+    background-color: red;
+    color: #fff;
+    font-size: 16px;
+    font-family: cursive;
+    margin-right: 120px;
+    border-radius: 300px;
+    font-weight: 400;
+}
