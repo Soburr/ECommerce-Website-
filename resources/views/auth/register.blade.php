@@ -64,7 +64,7 @@
             </form><br>
             <div class="signup">
                 <span>Already Registered ?</span>
-                <a href="login">Log In</a><br><br>
+                <a href="login">REGISTER</a><br><br>
             </div>
         </div>
 </body>

@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<br><br><br><br><br><br><br>
+<br><br><br><br>
 
+<button class="btn btn-danger btn-sm clear-all"><i class="fa fa-trash-o"></i> Clear Cart</button>
+<br><br>
 
 <table id="cart" class="table table-hover table-condensed">
     <thead>
@@ -84,6 +86,26 @@
         if(confirm("Are you sure want to remove?")) {
             $.ajax({
                 url: '{{ route('remove.from.cart') }}',
+                method: "DELETE",
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    id: ele.parents("tr").attr("data-id")
+                },
+                success: function (response) {
+                    window.location.reload();
+                }
+            });
+        }
+    });
+
+    $(".clear-all").click(function (e) {
+        e.preventDefault();
+
+        var ele = $(this);
+
+        if(confirm("Are you sure want to Clear all items?")) {
+            $.ajax({
+                url: '{{ route('clear') }}',
                 method: "DELETE",
                 data: {
                     _token: '{{ csrf_token() }}',

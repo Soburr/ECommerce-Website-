@@ -58,5 +58,17 @@ class CartController extends Controller
             session()->flash('success', 'Product removed successfully');
         }
     }
-    
+
+    public function clear(Request $request)
+    {
+        if($request->all) {
+            $cart = session()->get('cart');
+            if(isset($cart[$request->all()])) {
+                unset($cart[$request->all()]);
+                session()->put('cart', $cart);
+            }
+            session()->flash('success', 'Product removed successfully');
+        }
+    }
+
 }

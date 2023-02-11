@@ -2,8 +2,6 @@
 
 @section('content')
     <br><br><br><br><br>
-
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -23,9 +21,6 @@
                 </div>
                 <h1 style="font-size: 25px; font-weight: 400; margin-right: 220px; font-family: cursive;">
                     ${{ $products->fee }}</h1><br>
-                <div class="fourth-type">
-                    <button>MORE ABOUT THIS PRODUCT</button><br><br>
-                </div>
                 <h2>{{ $products->description }}</h2>
             </div>
         </div>

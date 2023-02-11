@@ -40,6 +40,8 @@ Route::patch('update-cart', 'App\Http\Controllers\CartController@update')->middl
 
 Route::delete('remove-from-cart', 'App\Http\Controllers\CartController@remove')->middleware(['auth'])->name('remove.from.cart');
 
+Route::delete('clear-all', 'App\Http\Controllers\CartController@clear')->middleware(['auth'])->name('clear');
+
 Route::get('/logout', 'App\Http\Controllers\DashboardController@logout');
 
 
